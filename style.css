@@ -16,12 +16,12 @@ body
 #app-cover
 {
     position: absolute;
-    top: 50%;
+    top: 40px;
     right: 0;
     left: 0;
-    width: 430px;
-    height: 100px;
-    margin: -4px auto;
+    width: 300px;
+    height: 70px;
+    margin: 20;
 }
 
 #bg-artwork
@@ -65,16 +65,18 @@ body
     top: 0;
     right: 15px;
     left: 15px;
-    padding: 13px 22px 10px 184px;
+    padding: 20px 22px 10px 22px;
     background-color: #fff7f7;
     border-radius: 15px 15px 0 0;
     transition: 0.3s ease top;
+    visibility:hidden;
     z-index: 1;
 }
 
 #player-track.active
 {
-    top: -92px;
+    top:60px;
+    visibility:visible;
 }
 
 #album-name
@@ -88,12 +90,12 @@ body
 {
     color: #acaebd;
     font-size: 13px;
-    margin: 2px 0 13px 0;
+    margin: 5px 0 13px 0;
 }
 
 #track-time
 {
-    height: 12px;
+    height: 10px;
     margin-bottom: 3px;
     overflow: hidden;
 }
@@ -190,9 +192,9 @@ body
 {
     position: absolute;
     top: -40px;
-    width: 115px;
-    height: 115px;
-    margin-left: 40px;
+    width: 75px;
+    height: 75px;
+    margin-left: 13px;
     transform: rotateZ(0);
     transition: 0.3s ease all;
     box-shadow: 0 0 0 10px #fff;
@@ -202,7 +204,7 @@ body
 
 #album-art.active
 {
-    top: -60px;
+    top: -45px;
     box-shadow: 0 0 0 4px #fff7f7, 0 30px 50px -15px #afb7c1;
 }
 
@@ -296,9 +298,9 @@ body
 
 #player-controls
 {
-    width: 250px;
+    width: 220px;
     height: 100%;
-    margin: 0 5px 0 141px;
+    margin: 10px -14px 0px 0px;
     float: right;
     overflow: hidden;
 }
@@ -307,14 +309,14 @@ body
 {
     width: 33.333%;
     float: left;
-    padding: 12px 0;
+    padding: 0 0;
 }
 
 .button
 {
-    width: 26px;
-    height: 26px;
-    padding: 25px;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
     background-color: #fff;
     border-radius: 6px;
     cursor: pointer;
@@ -327,6 +329,7 @@ body
     font-size: 26px;
     text-align: center;
     line-height: 1;
+    padding: 5px
 }
 
 .button, .button i
