@@ -271,8 +271,8 @@
                 selectTrack(0);
                 
                 audio.loop = false;
-            
-                playPauseButton.on('click',playPause);
+                playPause();
+                //playPauseButton.on('click',playPause);
                 
                 sArea.mousemove(function(event){ showHover(event); });
                 
@@ -286,7 +286,7 @@
         playNextTrackButton.on('click',function(){ selectTrack(1);});
         }
     
-        initPlayer(playPauseButton.on());
+        initPlayer();
         
 });
   </script>
