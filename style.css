@@ -19,7 +19,7 @@ body
     top: 40px;
     right: 0;
     left: 0;
-    width: 300px;
+    width: 250px;
     height: 70px;
     margin: 20;
 }
@@ -191,7 +191,7 @@ body
 #album-art
 {
     position: absolute;
-    top: -40px;
+    top: -30px;
     width: 75px;
     height: 75px;
     margin-left: 13px;
@@ -204,7 +204,7 @@ body
 
 #album-art.active
 {
-    top: -45px;
+    top: -35px;
     box-shadow: 0 0 0 4px #fff7f7, 0 30px 50px -15px #afb7c1;
 }
 
@@ -298,9 +298,9 @@ body
 
 #player-controls
 {
-    width: 220px;
+    width: 170px;
     height: 100%;
-    margin: 10px -14px 0px 0px;
+    margin: 13px 0px 0px 0px;
     float: right;
     overflow: hidden;
 }
