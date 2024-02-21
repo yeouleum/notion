@@ -270,8 +270,8 @@
 
                 selectTrack(0);
                 
-                audio.loop = false;
-                audio.play()
+                audio.loop = true;
+            
                 playPauseButton.on('click',playPause);
                 
                 sArea.mousemove(function(event){ showHover(event); });
