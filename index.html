@@ -209,13 +209,13 @@
     function selectTrack(flag)
     {
         if( flag == 0 || flag == 1 )
-            ++currIndex;
+        { ++currIndex;
+            if (currIndex >= 4 )
+             --currIndex;
+        }
         else
             --currIndex;
-        if (currIndex >4 )
-             --currIndex;
-        else if (currIndex<0)
-            ++currIndex;
+        
 
         if( (currIndex > -1) && (currIndex < albumArtworks.length) )
         {
