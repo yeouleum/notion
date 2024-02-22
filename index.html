@@ -210,12 +210,15 @@
     {
         if( flag == 0 || flag == 1 )
         { ++currIndex;
-            if (currIndex == 4 )
-             currIndex=1;
+            if (currIndex == 5 )
+             currIndex=0;
         }
         else
-            --currIndex;
-        
+        {
+         --currIndex;
+            if (currIndex == 0 )
+             currIndex=5;
+        }
 
         if( (currIndex > -1) && (currIndex < albumArtworks.length) )
         {
