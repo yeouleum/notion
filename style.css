@@ -10,18 +10,21 @@ body
 {
     font-family: Helvetica, Arial;
     margin: 0;
-    background-color: #ffeff5;
+    /*background-color: #ffeff5;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #app-cover
 {
-    position: absolute;
+    position: relative;
     top: 0;
     right: 0;
     left: 0;
     width: 250px;
     height: 150px;
-    margin: 20px;
+    margin: 10px;
 }
 
 #bg-artwork
