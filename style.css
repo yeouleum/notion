@@ -113,6 +113,7 @@ body
     font-weight: bold;
     margin: 26px 0 10px 0;
     text-align:center;
+    height: 20px;
 }
 
 #track-name
@@ -121,13 +122,15 @@ body
     font-size: 13px;
     margin: 10px 10px 0px 10px;
     text-align:center;
+    height:15.2px;
     
 }
 
 
+
 #track-time
 {
-    /* height: 10px; */
+    height: 10.2px;
     margin-bottom: 3px;
     margin-left:5px;
     margin-right:5px;
