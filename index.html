@@ -25,13 +25,12 @@
             </div>
             <div id="player-content">
                 <div id="album-art">
-                    <img src="https://i.namu.wiki/i/nFQJ64vX94KdKuO1tZYJxpREj7FsDYmnbA8XaExAAL2gUfyo-4nwsttenqIbHgy-GVpmxOXlKni8mHzu55-AVpJCOSb7oL8t7KORG6zUKM1iLwJJs6sOrAr3kYLKER9JkUS_zNycE_d43PfiMS4TWg.webp" class="active" id="_1">
-                    <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_2.jpg" id="_2">
-                    <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_3.jpg" id="_3">
-                    <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_4.jpg" id="_4">
-                    <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_5.jpg" id="_5">
-                    <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_5.jpg" id="_6">
-                    <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_5.jpg" id="_7">
+                    <img src="https://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/082/649/749/82649749_1650601219136_1_600x600.JPG" class="active" id="_1">
+                    <img src="https://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/081/037/385/81037385_1519633017385_1_600x600.JPG" id="_2">
+                    <img src="https://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/081/782/068/81782068_1607925793379_1_600x600.JPG" id="_3">
+                    <img src="https://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/080/577/789/80577789_1431263174287_1_600x600.JPG" id="_4">
+                    <img src="https://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/080/577/789/80577789_1431263174287_1_600x600.JPG id="_5">
+                    <img src="https://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/081/037/385/81037385_1519633017385_1_600x600.JPG" id="_6">
                     <div id="buffer-box">Buffering ...</div>
                 </div>
                 <div id="player-controls">
@@ -60,7 +59,7 @@
   <script type="text/javascript">
     $(function()
 {
-    var playerTrack = $("#player-track"), bgArtwork = $('#bg-artwork'), bgArtworkUrl, albumName = $('#album-name'), trackName = $('#track-name'), albumArt = $('#album-art'), sArea = $('#s-area'), seekBar = $('#seek-bar'), trackTime = $('#track-time'), insTime = $('#ins-time'), sHover = $('#s-hover'), playPauseButton = $("#play-pause-button"),  i = playPauseButton.find('i'), tProgress = $('#current-time'), tTime = $('#track-length'), seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0, buffInterval = null, tFlag = false, albums = ['Savior','머물러줘','DIVIN','너여야만 해','Kontrol','끌림'], trackNames = ['Kim Sung Kyu','Kim Sung Kyu','Kim Sung Kyu','Kim Sung Kyu','Kim Sung Kyu','Kim Sung Kyu','Kim Sung Kyu'], albumArtworks = ['_1','_2','_3','_4','_5','_6','_7'], trackUrl = ['https://blog.kakaocdn.net/dn/cmJEUy/btsFm2DEL1I/5h6Da5WEThrjrWl4FuWKf1/Kim_Sung_Kyu-Savior.mp3?attach=1&knm=tfile.mp3','https://blog.kakaocdn.net/dn/I87ZR/btsFkT8xuvb/jwKKN5awLNmISfQysr2L2k/Kim%20Sung%20Kyu%20-%20%EB%A8%B8%EB%AC%BC%EB%9F%AC%EC%A4%98%20%28Stay%29%20%5B128%20kbps%5D.mp3?attach=1&knm=tfile.mp3','https://blog.kakaocdn.net/dn/rzPNe/btsFm8DTCyo/0K5ktcqgDHiBUjML8F0yD0/Kim%20Sung%20Kyu%20-%20DIVIN%27%20%5B320%20kbps%5D.mp3?attach=1&knm=tfile.mp3','https://blog.kakaocdn.net/dn/kHV6V/btsFkJrrDEB/zrIDGfKalcAWNnPerzXdmk/Kim%20Sung%20Kyu%20-%20%EB%84%88%EC%97%AC%EC%95%BC%EB%A7%8C%20%ED%95%B4%20%28The%20Answer%29%20%5B128%20kbps%5D.mp3?attach=1&knm=tfile.mp3','https://blog.kakaocdn.net/dn/pkgtz/btsFh7mhK3r/9PNsK6Ma1JD9bkIlADhq40/KIM_SUNG_KYU-Kontrol.mp3?attach=1&knm=tfile.mp3','https://blog.kakaocdn.net/dn/LN45s/btsFiM9Ve4D/0YmknWC7Ty9wC5n5kJwKwK/Kim%20Sung%20Kyu%20-%20%EB%81%8C%EB%A6%BC%20%28Attraction%29%20%5B128%20kbps%5D.mp3?attach=1&knm=tfile.mp3'], playPreviousTrackButton = $('#play-previous'), playNextTrackButton = $('#play-next'), currIndex = -1;
+    var playerTrack = $("#player-track"), bgArtwork = $('#bg-artwork'), bgArtworkUrl, albumName = $('#album-name'), trackName = $('#track-name'), albumArt = $('#album-art'), sArea = $('#s-area'), seekBar = $('#seek-bar'), trackTime = $('#track-time'), insTime = $('#ins-time'), sHover = $('#s-hover'), playPauseButton = $("#play-pause-button"),  i = playPauseButton.find('i'), tProgress = $('#current-time'), tTime = $('#track-length'), seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0, buffInterval = null, tFlag = false, albums = ['Savior','머물러줘','DIVIN','너여야만 해','Kontrol','끌림'], trackNames = ['Kim Sung Kyu','Kim Sung Kyu','Kim Sung Kyu','Kim Sung Kyu','Kim Sung Kyu','Kim Sung Kyu'], albumArtworks = ['_1','_2','_3','_4','_5','_6'], trackUrl = ['https://blog.kakaocdn.net/dn/cmJEUy/btsFm2DEL1I/5h6Da5WEThrjrWl4FuWKf1/Kim_Sung_Kyu-Savior.mp3?attach=1&knm=tfile.mp3','https://blog.kakaocdn.net/dn/I87ZR/btsFkT8xuvb/jwKKN5awLNmISfQysr2L2k/Kim%20Sung%20Kyu%20-%20%EB%A8%B8%EB%AC%BC%EB%9F%AC%EC%A4%98%20%28Stay%29%20%5B128%20kbps%5D.mp3?attach=1&knm=tfile.mp3','https://blog.kakaocdn.net/dn/rzPNe/btsFm8DTCyo/0K5ktcqgDHiBUjML8F0yD0/Kim%20Sung%20Kyu%20-%20DIVIN%27%20%5B320%20kbps%5D.mp3?attach=1&knm=tfile.mp3','https://blog.kakaocdn.net/dn/kHV6V/btsFkJrrDEB/zrIDGfKalcAWNnPerzXdmk/Kim%20Sung%20Kyu%20-%20%EB%84%88%EC%97%AC%EC%95%BC%EB%A7%8C%20%ED%95%B4%20%28The%20Answer%29%20%5B128%20kbps%5D.mp3?attach=1&knm=tfile.mp3','https://blog.kakaocdn.net/dn/pkgtz/btsFh7mhK3r/9PNsK6Ma1JD9bkIlADhq40/KIM_SUNG_KYU-Kontrol.mp3?attach=1&knm=tfile.mp3','https://blog.kakaocdn.net/dn/LN45s/btsFiM9Ve4D/0YmknWC7Ty9wC5n5kJwKwK/Kim%20Sung%20Kyu%20-%20%EB%81%8C%EB%A6%BC%20%28Attraction%29%20%5B128%20kbps%5D.mp3?attach=1&knm=tfile.mp3'], playPreviousTrackButton = $('#play-previous'), playNextTrackButton = $('#play-next'), currIndex = -1;
 
     function playPause()
     {
@@ -211,7 +210,7 @@
     {
         if( flag == 0 || flag == 1 )
         { ++currIndex;
-            if (currIndex == 7 )
+            if (currIndex == 6 )
              currIndex=0;
         }
         else
