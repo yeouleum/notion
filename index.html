@@ -190,20 +190,18 @@
                 }
     }
     
-    function checkBuffering()
-    {
-        clearInterval(buffInterval);
-        buffInterval = setInterval(function()
-        { 
-            if( (nTime == 0) || (bTime - nTime) > 1000  )
-                albumArt.addClass('buffering');
-            else
-                albumArt.removeClass('buffering');
+    function checkBuffering() {
+    clearInterval(buffInterval);
+    buffInterval = setInterval(function() {
+        if (audio.readyState < 3 || (bTime - nTime) > 1000) {
+            albumArt.addClass('buffering');
+        } else {
+            albumArt.removeClass('buffering');
+        }
 
-            bTime = new Date();
-            bTime = bTime.getTime();
-
-        },100);
+        bTime = new Date();
+        bTime = bTime.getTime();
+    }, 100);
     }
 
     function selectTrack(flag)
@@ -271,27 +269,32 @@
         }
     }
 
-    function initPlayer()
-        {        
-        audio = new Audio();
+   function initPlayer() {        
+    audio = new Audio();
 
-                selectTrack(0);
-                
-                audio.loop = false;
-               
-                playPauseButton.on('click',playPause);
-                
-                sArea.mousemove(function(event){ showHover(event); });
-                
-        sArea.mouseout(hideHover);
-        
-        sArea.on('click',playFromClickedPos);
-                
-        $(audio).on('timeupdate',updateCurrTime);
+    selectTrack(0);
 
-        playPreviousTrackButton.on('click',function(){ selectTrack(-1);} );
-        playNextTrackButton.on('click',function(){ selectTrack(1);});
-        }
+    audio.loop = false;
+
+    playPauseButton.on('click', playPause);
+
+    sArea.mousemove(function(event) { showHover(event); });
+
+    sArea.mouseout(hideHover);
+
+    sArea.on('click', playFromClickedPos);
+
+    $(audio).on('timeupdate', updateCurrTime);
+
+    playPreviousTrackButton.on('click', function() { selectTrack(-1); });
+    playNextTrackButton.on('click', function() { selectTrack(1); });
+
+    // `canplay` 이벤트로 초기 버퍼링 방지
+    audio.addEventListener('canplay', function() {
+        nTime = new Date().getTime();
+        checkBuffering();
+    });
+}
     
         initPlayer();
         
