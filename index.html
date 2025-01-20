@@ -247,12 +247,11 @@
 
             if(flag == 0)
             {
-                audio.paused();
-                playerTrack.removeClass('active');
-                albumArt.removeClass('active');
+                audio.play();
+                playerTrack.addClass('active');
+                albumArt.addClass('active');
+            
                 clearInterval(buffInterval);
-                albumArt.removeClass('buffering');
-                i.attr('class','fas fa-play');
                 checkBuffering();
             }
 
