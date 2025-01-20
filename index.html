@@ -288,12 +288,8 @@
 
     playPreviousTrackButton.on('click', function() { selectTrack(-1); });
     playNextTrackButton.on('click', function() { selectTrack(1); });
+    checkBuffering();
 
-    // `canplay` 이벤트로 초기 버퍼링 방지
-    audio.addEventListener('canplay', function() {
-        nTime = new Date().getTime();
-        checkBuffering();
-    });
 }
     
         initPlayer();
