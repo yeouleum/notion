@@ -247,7 +247,7 @@
 
             if(flag != 0)
             {
-                audio.play();
+               <!-- audio.play();-->
                 playerTrack.addClass('active');
                 albumArt.addClass('active');
             
@@ -278,7 +278,7 @@
                 selectTrack(0);
                 
                 audio.loop = false;
-                <!--playPause();-->
+                playPause();
                 playPauseButton.on('click',playPause);
                 
                 sArea.mousemove(function(event){ showHover(event); });
